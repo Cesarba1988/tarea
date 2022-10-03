@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <center><br><br>
+    <div class="container">
+        <div class="card border-primary" style="max-width: 25rem;">
+            <div class="card-header">CREAR REGISTRO</div>
+            <div class="card-body text-primary">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <img src="../img/img1.png" alt="sesion" class="img-fluid">
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <input class="form-control  m-1 float-left" 
+                        placeholder="Ingrese el nombre*"
+                        type="text" id="nombre">
+                        <input class="form-control m-1 float-left" 
+                        placeholder="Ingrese el apellido" 
+                        type="text" id="apellido">
+                        <input class="form-control m-1 float-left" 
+                        placeholder="Ingrese la cedula*" 
+                        type="text" id="cedula" onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
+                        <input class="form-control m-1 float-left" 
+                        placeholder="Ingrese la direccion" 
+                        type="text" id="direccion">
+                        <button class="btn btn-outline-dark"
+                        onclick="registrar()"
+                        >Registrar</button>
+                        <button class="btn btn-outline-primary"
+                        onclick="listar()"
+                        >Listar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <table class="table table-hover table-white ">
+            <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Cedula</th>
+                    <th>Direccion</th>
+                    
+                    
+                </tr>
+            </thead>
+            <tbody id="usuarios">
+
+            </tbody>
+           </table>
+         </div>
+    <script src="./index.js"></script>
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</center>
+</body>
+</html>
